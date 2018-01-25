@@ -22,7 +22,7 @@
         {
             "description": "Git source URI for application",
             "name": "SOURCE_REPOSITORY_URL",
-            "value": "https://github.com/redhat-cop/containers-quickstarts",
+            "value": "https://github.com/yasammez/openshift-zookeeper",
             "required": true
         },
         {
