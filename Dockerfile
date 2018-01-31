@@ -36,9 +36,9 @@ RUN INSTALL_PKGS="gettext tar zip unzip hostname nmap-ncat java-1.8.0-openjdk" &
 
 COPY zkGenConfig.sh zkOk.sh zkMetrics.sh /opt/zookeeper/bin/
 
-RUN useradd -u 1001 -r -c "Zookeeper User" $ZK_USER && \
+RUN useradd -u 1002 -r -c "Zookeeper User" $ZK_USER && \
     mkdir -p $ZK_DATA_DIR $ZK_DATA_LOG_DIR $ZK_LOG_DIR /usr/share/zookeeper /tmp/zookeeper && \
-    chown -R 1001:0 $ZK_DATA_DIR $ZK_DATA_LOG_DIR $ZK_LOG_DIR /tmp/zookeeper && \
+    chown -R 1002:0 $ZK_DATA_DIR $ZK_DATA_LOG_DIR $ZK_LOG_DIR /tmp/zookeeper && \
     /usr/local/bin/fix-permissions $ZK_DATA_DIR && \
     /usr/local/bin/fix-permissions $ZK_DATA_LOG_DIR && \
     /usr/local/bin/fix-permissions $ZK_LOG_DIR && \
@@ -46,4 +46,4 @@ RUN useradd -u 1001 -r -c "Zookeeper User" $ZK_USER && \
 
 WORKDIR "/opt/zookeeper"
 
-USER 1001
+USER 1002
