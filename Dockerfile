@@ -13,7 +13,7 @@ RUN INSTALL_PKGS="gettext tar zip unzip hostname nmap-ncat java-1.8.0-openjdk" &
     yum install -y $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all  && \
-    curl -vfsSL http://www.apache.org/dist/zookeeper/$ZK_DIST/$ZK_DIST.tar.gz | tar xzf - -C /opt && \
+    curl -fsSL http://www.apache.org/dist/zookeeper/$ZK_DIST/$ZK_DIST.tar.gz | tar xzf - -C /opt && \
     /usr/local/bin/fix-permissions /opt/$ZK_DIST && \
     ln -s /opt/$ZK_DIST /opt/zookeeper && \
     rm -rf /opt/zookeeper/CHANGES.txt \
