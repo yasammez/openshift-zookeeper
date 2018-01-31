@@ -5,7 +5,7 @@ ENV ZK_USER=zookeeper \
     ZK_DATA_LOG_DIR=/var/lib/zookeeper/log \
     ZK_LOG_DIR=/var/log/zookeeper \
     JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk \
-    ZK_DIST=zookeeper-3.4.9
+    ZK_DIST=zookeeper-3.4.11
 
 COPY fix-permissions /usr/local/bin
 
